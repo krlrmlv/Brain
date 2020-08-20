@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'GUERRILLA';
+    src: url('GUERRILLA-Normal.eot');
+    src: url('GUERRILLA-Normal.eot?#iefix') format('embedded-opentype'),
+        url('GUERRILLA-Normal.woff2') format('woff2'),
+        url('GUERRILLA-Normal.woff') format('woff'),
+        url('GUERRILLA-Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
