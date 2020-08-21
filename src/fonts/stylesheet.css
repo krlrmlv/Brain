@@ -8,3 +8,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Rough Draft CY';
+    src: url('RoughDraftCY-Regular.eot');
+    src: url('RoughDraftCY-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RoughDraftCY-Regular.woff2') format('woff2'),
+        url('RoughDraftCY-Regular.woff') format('woff'),
+        url('RoughDraftCY-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

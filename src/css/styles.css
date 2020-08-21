@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color: var(--black);
+  background-color: white;
 }
 
 .noscroll {
@@ -120,7 +120,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   margin: 0 auto;
 }
-
 
 /* header */
 
@@ -234,6 +233,7 @@ h2 {
   font-size: 48px;
   line-height: 56px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 p {
@@ -249,16 +249,21 @@ section{
   width: 100%;
   position: relative;
   z-index: 0;
+  margin-bottom: 80px;
 }
 
+
+.first-section{
+  margin-bottom: 0;
+}
 .first-section__content {
   position: relative;
   background-image: url(../img/fscreen-1.png);
   background-repeat: no-repeat;
   background-position-y: bottom;
-  background-position-x: left;
+  background-position-x: 17px;
   background-size: auto;   
-  padding: 250px 0;
+  padding: 253px 0;
   display: flex;
   justify-content: flex-end; 
 }
@@ -298,7 +303,7 @@ section{
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 1;
   height: 44px;
   padding: 0 18px;
   background-color: var(--colorOrange);
@@ -312,8 +317,9 @@ section{
 
 .action-buttons a:hover,
 .action-buttons button:hover{
-  background-color: transparent;
-  border-color: var(--colorOrange)
+  background-color: white;
+  border-color: transparent;
+  color: var(--colorOrange);
 }
 .action-buttons a:active,
 .action-buttons button:active{
@@ -329,8 +335,9 @@ section{
 
 .action-buttons a.transparent:hover,
 .action-buttons button.transparent:hover{
-  background-color:var(--colorOrange);
+  background-color: white;
   border-color: transparent;
+  color: var(--colorOrange);
 }
 
 .action-buttons a:last-child,
@@ -354,9 +361,9 @@ section{
 
 .about-us-block{
   padding-top: 20px;
- }
+}
 
- .about-us-block.about-1{
+.about-us-block.about-1{
   background-image: url(../img/about-1-bg.png);
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -368,8 +375,10 @@ section{
   display: none;
 }
 
-.about-us__info{
+.about-us__content{
   margin-top: 90px;
+}
+.about-us__info{
   margin-bottom: 60px;
 }
 
@@ -422,14 +431,251 @@ h3{
   background-image: url(../img/about-2-bg.png);
   background-repeat: no-repeat;
   background-position-y: bottom;
-  background-position-x: 30%;
+  background-position-x: 37.1%;
+  padding-top: 30px;
 }
 
-.about-us-block.about-2 .about-us__content{
+.about-2 .about-us__content{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;;
+}
+
+.about-2 .about-content__hr{
+  margin-right: 0;
+  margin-left: auto;  
+}
+.about-2 .about-content__list li {
+  flex-direction: row-reverse;
+}
+.about-2 .about-content__list li > img {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.about-2 .about-us__info{
+  margin-bottom: 160px;
+}
+
+.count-box{
+  display: flex;
+  align-items: center;
+  padding: 24px 0 29px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.count-box__item {
+  width: 33.14%;
+  padding-left: 8.8%;
+  display: flex;
+  flex-direction: column;
+}
+
+.count-box__title{
+  font-size: 96px;
+  line-height: 1;
+}
+.count-box__text{
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.our-work{
+  font-family: 'Roboto';
+}
+
+
+.our-work__container{
+  display: flex;
+}
+
+.work-step{
+  text-align: center;
+  width: 33.3%;
+}
+
+
+.work-step__ico{
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background-color: var(--lightBlue);
+  border: 4px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+
+.work-step:not(:last-child) .work-step__ico::after{
+  content: "";
+  position: absolute;
+  right: -69%;
+  width: 35%;
+  height: 3px;
+  display: block;
+  background-color: white;
+}
+
+.work-step__text{
+  font-weight: 500;
+}
+
+
+.courses__container{
+  display: flex;
+  justify-content: space-between;
+}
+.courses__course{
+  background: #003F5D;
+  border: 3px solid white;
+  box-sizing: border-box;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  width: 48.77%;
+}
+
+.course__head{
+  font-family: 'Rough Draft CY';
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  padding: 25px 0;
+  border-bottom: inherit;
+}
+
+.course__body{
+  display: flex;
+}
+.course__column:first-child{
+  width: 59.6%;
+  border-right: 3px solid white;
+}
+
+.course__row{
+  padding: 28px 13px;
+  width: 100%;
+}
+.course__row:not(:last-child){
+  border-bottom: 3px solid white;
+}
+
+.course__row li{
+  display: flex;
+  align-items: flex-start;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.course__row li::before {
+  content: url(../img/check.png);
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.course__row li:not(:last-child){
+  margin-bottom: 21px;
+}
+
+.course__column:last-child {
+  flex: 1;
+}
+.course__column:last-child .course__row{
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  height: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sale{
+  font-size: 24px;
+  line-height: 1;
+  text-decoration-line: line-through;
+  color: var(--colorOrange);
+}
+
+.price{
+  font-size: 36px;
+  line-height: 1;
+}
+
+.label{
+  font-size: 24px;
+  line-height: 1;
+}
+
+a.course__row{
+  background-color: var(--colorOrange);
+  color: white;
+  font-size: 36px;
+}
+
+a.course__row:hover{
+  background-color: white;
+  color: var(--colorOrange);
+}
+
+.reviews__container:not(.swiper-container-horizontal) .swiper-wrapper{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.reviews-item {
+  border: 3px solid white;
+  padding: 30px 24px 48px 30px;
+  margin-right: 45px;
+  width: 30.871%;
+  height: auto;
+  background-color: var(--lightBlue);
+}
+
+.reviews-item:last-child {
+  margin-right: 0;
+}
+
+.review-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.review-head > img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.review-head__info {
+  flex: 1;
+}
+
+.review-head__rating {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.review-head__rating img:not(:last-child) {
+  margin-right: 5px;
+}
+
+.review-body{
+  font-family: 'Roboto';
+  font-size: 20px;
+  line-height: 120%;
 }
 
 /* main end */
