@@ -1,46 +1,25 @@
 var reviewsSwiper = false;
 
-$(document).ready(function () {
-
-    if ($(".reviews-swiper").length > 0) {
-
-        reviewsSwiper = new Swiper('.reviews-swiper', {
+function swiperContoller(){
+    if(window.innerWidth < 1000){
+        reviewsSwiper = new Swiper('.reviews__container ', {
             speed: 500,
-            loop: true,
-            keyboard: {
-                enabled: true,
-                onlyInViewport: true,
-            },
-            autoplay: {
-                delay: 3000,
-            },
+            loop: false,
+            initialSlide: 1,
             centeredSlides: true,
-            navigation: {
-                nextEl: '.reviews-swiper_navigation .swiper-button-next',
-                prevEl: '.reviews-swiper_navigation .swiper-button-prev',
-            },
-
-            // watchSlidesProgress: true,
-            // watchSlidesVisibility: true,
+            pagination: {
+                el: '.reviews__pagination',
+                type: 'bullets',
+              },
             slidesPerView: "auto",
-            breakpoints: {
-
-                0: {
-                    centeredSlides: false,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-                1801: {
-                    slidesPerView: "auto",
-                    spaceBetween: 0
-                }
+            breakpoinst:{
+                0:{}
             }
         });
     }
+}
 
-
+$(document).ready(function () {
   
     $("a").click(function (e) {
 
@@ -53,18 +32,39 @@ $(document).ready(function () {
                 $('html,body').animate({
                     scrollTop: (destination - $("header").height() - 20)
                 }, 1000);
+
+                if($(".navigation").hasClass("active")){
+                    $(".burger").removeClass("active");
+                    $(".navigation").removeClass("active");
+                    $("html,body").removeClass("noscroll");
+                }
+
                 return false;
             } catch (e) {}
         }
     });
 
-   
-    try {
-        AOS.init({
-            once: true,
-            disable: 'mobile'
-        });
-    } catch (error) {}
+
+    $(document).mouseup(function (e) { 
+        if ($(e.target).hasClass("burger") || $(e.target).closest(".burger").length > 0) {
+            $(".burger").toggleClass("active");
+            $(".navigation").toggleClass("active");
+
+            window.innerWidth < 1000 && $("html,body").toggleClass("noscroll");
+
+        } else {
+            var div = $(".mobile-menu__wrapper"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                &&
+                div.has(e.target).length === 0) { // и не по его дочерним элементам
+                $(".burger").removeClass("active");
+                $(".navigation").removeClass("active");
+                $("html,body").removeClass("noscroll");
+            }
+        }
+    });
+
+    swiperContoller();
 
 });
 $(window).resize(function () {
