@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <base href="/">
   <title>Brain</title>
@@ -89,7 +89,7 @@
             
             <img src="./src/img/fscreen-mobile.png" alt="fscreen-mobile">
             <div class="action-buttons">
-              <a href="#">Записаться</a>
+              <button class="pp_" data-pp="request">Записаться</button>
               <a href="#" class="transparent">Бесплатное занятие</a>
             </div>
           </div>
@@ -372,6 +372,42 @@
         </div>
       </div>
     </footer>
+    
+    
+    <div class="pp" data-pp="request">
+      <div class="pp__bg"></div>
+      <div class="pp__content">  
+        <div class="popup-content">
+          <div class="popup-form">
+            <img class="popup-form__img" src="./src/img/popup-img.jpg" alt="popup-img">
+            <form class="popup-form__form">
+              <h4 class="popup-form__title">
+                Заполни заявку
+              </h4>
+              <div class="popup-form__fields">
+                <div class="input-row">
+                  <input type="text" placeholder="Имя" required>
+                  <input type="text" placeholder="Предмет" required>
+                </div>
+                <input type="tel" placeholder="Тел." required>
+                <input type="email" placeholder="Email" required>
+                <div class="checkbox">
+                  <input type="checkbox" id="agree">
+                  <label class="checkbox__text" for="agree">согласие на обработку персональных данных</label>
+                </div>
+              </div>
+              <button class="popup-form__button disabled" type="submit">
+                Отправить
+              </button>
+            </form>
+          </div>
+          <div class="popup-success">
+          <img class="popup-success__img" src="./src/img/popup-success__img.png" alt="popup-success__img">
+          <p class="popup-success__text">Мы свяжемся с тобой в ближайшее время!</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <script src="./src/js/jquery-3.4.1.min.js"></script>
     <script src="./src/js/swiper.min.js"></script>
